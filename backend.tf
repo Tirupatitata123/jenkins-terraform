@@ -1,0 +1,9 @@
+terraform{
+backend "s3" {
+  bucket = "terraform-state-2024"
+  key    = "project1/terraform.tfstate"
+  region = "us-east-1"
+  dynamodb_table = "terraform-lock-table"
+  encrypt        = true
+}
+}
